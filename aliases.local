@@ -1,1 +1,2 @@
 alias occupiedspace="du -ms *|sort -n"
+alias gp="git push"
