@@ -1,0 +1,25 @@
+" Change map leader to ,
+let mapleader = ","
+
+" Solarized """""""""""""""""""""""""""""""""""
+if !has('gui_running')
+    let g:solarized_termcolors=256
+endif
+
+set background=dark
+colorscheme solarized
+
+" NERDTree """"""""""""""""""""""""""""""""""""
+" Show hidden files
+let NERDTreeShowHidden=1
+
+" Autostart NERDTree on vim startup
+autocmd vimenter * NERDTree
+
+" Run NERDTree on ESC+t
+function OpenNERDTree()
+  execute ":NERDTree"
+endfunction
+command -nargs=0 OpenNERDTree :call OpenNERDTree()
+
+nmap <ESC>t :OpenNERDTree<CR>
