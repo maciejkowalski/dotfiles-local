@@ -1,0 +1,7 @@
+# start ssh-agent if not present
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval `ssh-agent -s`
+fi
+
+# init get-shit-done
+PATH=$PATH:$HOME/.get-shit-done # Add RVM to PATH for scripting
