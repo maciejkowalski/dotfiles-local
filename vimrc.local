@@ -23,3 +23,10 @@ endfunction
 command -nargs=0 OpenNERDTree :call OpenNERDTree()
 
 nmap <ESC>t :OpenNERDTree<CR>
+
+" CtrlP """"""""""""""""""""""""""""""""""""""""
+" setup CtrlP as leader+t
+map <leader>t :CtrlP<cr>
+
+" Display more results (30)
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:30'
