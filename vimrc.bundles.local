@@ -1,2 +1,5 @@
 Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'jgdavey/vim-blockle'
+Plug 'tpope/vim-surround'
