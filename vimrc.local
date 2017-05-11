@@ -14,7 +14,9 @@ colorscheme solarized
 let NERDTreeShowHidden=1
 
 " Autostart NERDTree on vim startup
-autocmd vimenter * NERDTree
+if has('gui_running')
+  autocmd vimenter * NERDTree
+endif
 
 " Run NERDTree on ESC+t
 function OpenNERDTree()
@@ -30,3 +32,13 @@ map <leader>t :CtrlP<cr>
 
 " Display more results (30)
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:30'
+
+" Ag """""""""""""""""""""""""""""""""""""""""""
+" setup Ag as leader+g
+nnoremap <leader>g :Ag<Space>
+
+" highlight search results """""""""""""""""""""
+set hlsearch
+
+" Line at the end of the file
+set eol
