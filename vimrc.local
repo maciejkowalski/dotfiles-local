@@ -1,13 +1,11 @@
 " Change map leader to ,
 let mapleader = ","
 
-" Solarized """""""""""""""""""""""""""""""""""
-if !has('gui_running')
-    let g:solarized_termcolors=256
-endif
-
+" Gruvbox " """""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
 
 " NERDTree """"""""""""""""""""""""""""""""""""
 " Show hidden files
