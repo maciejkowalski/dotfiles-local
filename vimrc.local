@@ -1,3 +1,8 @@
+" Font size in mvim
+if has('gui_running')
+  set guifont=Menlo:h18
+endif
+
 " Change map leader to ,
 let mapleader = ","
 
