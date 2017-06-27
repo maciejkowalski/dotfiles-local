@@ -56,3 +56,6 @@ let g:NERDTrimTrailingWhitespace = 1
 " https://blog.petrzemek.net/2016/04/06/things-about-vim-i-wish-i-knew-earlier/
 set number
 set relativenumber
+
+" tab previous as gb
+nnoremap gb  :tabprev<CR>
