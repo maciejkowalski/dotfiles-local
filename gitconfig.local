@@ -36,9 +36,25 @@
   dd = diff HEAD
   df = diff --color-words
   fix = commit --amend
-  l = !bash -ic 'source ~/.githelpers.local && pretty_git_log_short'
-  lk = !bash -ic 'source ~/.githelpers.local && pretty_git_log_medium'
-  lkj = !bash -ic 'source ~/.githelpers.local && pretty_git_log_full'
+  # Fancy logging.
+  #   h = head
+  #   hp = head with patch
+  #   r = recent commits, only current branch
+  #   ra = recent commits, all reachable refs
+  #   l = all commits, only current branch
+  #   la = all commits, all reachable refs
+  #   b = all branches
+  #   bs = all branches, sorted by last commit date
+  head = !git r -1
+  h = !git head
+  hp = "!. ~/.githelpers.local && show_git_head"
+  r = !GIT_NO_PAGER=1 git l -30
+  ra = !git r --all
+  l = "!. ~/.githelpers.local && pretty_git_log"
+  lk = "!. ~/.githelpers.local && pretty_git_log_long"
+  la = !git l --all
+  b = "!. ~/.githelpers.local && pretty_git_branch"
+  bs = "!. ~/.githelpers.local && pretty_git_branch_sorted"
   w = whatchanged
   align = !git fetch origin master && git rebase origin/master
 
