@@ -4,7 +4,10 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 fi
 
 # init get-shit-done
-PATH=$PATH:$HOME/.get-shit-done # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.get-shit-done
+# Rbenv
+PATH=$HOME/.rbenv/bin:$PATH
+PATH=$HOME/.rbenv/shims:$PATH
 
 # Open the same working dir in new tab (MAC OS X only)
 precmd() {print -Pn "\e]2; %~/ \a"}
