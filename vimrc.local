@@ -1,6 +1,10 @@
 " Font size in mvim
 if has('gui_running')
-  set guifont=Menlo:h18
+  if has('mac')
+    set guifont=Menlo:h18
+  elseif has('unix')
+    set guifont=Inconsolata\ Medium\ 12
+  endif
 endif
 
 " Change map leader to ,
