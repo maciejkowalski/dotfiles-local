@@ -12,3 +12,5 @@ preexec() {print -Pn "\e]2; %~/ \a"}
 
 # Fix RSpec failures
 ulimit -n 4096
+
+export MALLOC_ARENA_MAX=2
