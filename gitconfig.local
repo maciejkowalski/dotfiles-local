@@ -6,6 +6,9 @@
   user = maciejkowalski
   token = …
 
+[blame]
+  coloring = repeatedLines
+
 [color]
   interactive = auto
   grep = auto
