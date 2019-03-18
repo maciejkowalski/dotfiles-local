@@ -1,6 +1,4 @@
 alias occupiedspace="du -ms *|sort -n"
-alias sr="spring rspec"
 
 alias be="bundle exec"
 alias bes="bundle exec spring"
-
