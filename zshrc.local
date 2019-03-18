@@ -16,6 +16,7 @@ case `uname` in
     # Rbenv
     PATH=$HOME/.rbenv/bin:$PATH
     PATH=$HOME/.rbenv/shims:$PATH
+    PATH=$HOME/.cargo/bin:$PATH
 
     # enable color support of ls and also add handy aliases
     if [ -x /usr/bin/dircolors ]; then
