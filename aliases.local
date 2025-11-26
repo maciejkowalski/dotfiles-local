@@ -4,3 +4,9 @@ alias be="bundle exec"
 alias bes="bundle exec spring"
 
 alias g="git"
+
+alias linecount="find . -path './db' -prune -o -path './config' -prune -o -name '*.rb' \
+  -print0 \
+| xargs -0 wc -l \
+| grep -v ' total$' \
+| sort -n"
