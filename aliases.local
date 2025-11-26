@@ -2,3 +2,5 @@ alias occupiedspace="du -ms *|sort -n"
 
 alias be="bundle exec"
 alias bes="bundle exec spring"
+
+alias g="git"
