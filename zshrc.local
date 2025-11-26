@@ -47,3 +47,11 @@ export MALLOC_ARENA_MAX=2
 
 HISTSIZE=10000
 HISTFILESIZE=10000
+
+[[ -n "$WT_SESSION" ]] && {
+  chpwd() {
+    echo -en '\e]9;9;"'
+    wslpath -w "$PWD" | tr -d '\n'
+    echo -en '"\x07'
+  }
+}
