@@ -15,9 +15,22 @@ case `uname` in
   ;;
   Linux)
     # Rbenv
-    PATH=$HOME/.rbenv/bin:$PATH
-    PATH=$HOME/.rbenv/shims:$PATH
-    PATH=$HOME/.cargo/bin:$PATH
+    if [ -d "$HOME/.rbenv" ]; then
+      PATH=$HOME/.rbenv/bin:$PATH
+      PATH=$HOME/.rbenv/shims:$PATH
+      PATH=$HOME/.cargo/bin:$PATH
+      export RBENV_ROOT=$HOME/.rbenv
+      export PATH=$RBENV_ROOT/shims:/versions:$PATH
+
+      # Rbenv completion
+      FPATH=~/.rbenv/completions:"$FPATH"
+
+      autoload -U compinit
+      compinit
+
+      # Added by `rbenv init` on Fri Jul 11 15:08:11 CEST 2025
+      eval "$(rbenv init - --no-rehash zsh)"
+    fi
 
     # enable color support of ls and also add handy aliases
     if [ -x /usr/bin/dircolors ]; then
