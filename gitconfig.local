@@ -55,7 +55,7 @@
   ra = !git r --all
   l = "!. ~/.githelpers.local && pretty_git_log"
   lk = "!. ~/.githelpers.local && pretty_git_log_long"
-  la = !git l --all
+  la = !git log --full-history --format=fuller
   b = "!. ~/.githelpers.local && pretty_git_branch"
   bs = "!. ~/.githelpers.local && pretty_git_branch_sorted"
   w = whatchanged
