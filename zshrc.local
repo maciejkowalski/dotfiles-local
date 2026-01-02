@@ -1,7 +1,6 @@
-# start ssh-agent if not present
-# only on WSL
-if [ -z "$SSH_AUTH_SOCK" ] && [ ! -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
-  eval `ssh-agent -s`
+# Start ssh-agent if not present (only outside WSL)
+if [ -z "$SSH_AUTH_SOCK" ] && [ -z "$WSL_DISTRO_NAME" ]; then
+  eval $(ssh-agent -s) > /dev/null
 fi
 
 # init get-shit-done
