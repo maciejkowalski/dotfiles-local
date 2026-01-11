@@ -59,6 +59,7 @@ export MALLOC_ARENA_MAX=2
 
 HISTSIZE=10000
 HISTFILESIZE=10000
+setopt EXTENDED_HISTORY
 
 [[ -n "$WT_SESSION" ]] && {
   chpwd() {
