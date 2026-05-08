@@ -1,4 +1,6 @@
 #!/bin/bash
+export RBENV_VERSION=$(rbenv global)
+
 
 # Log output:
 #
