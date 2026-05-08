@@ -23,9 +23,7 @@ case `uname` in
 
       # Rbenv completion
       FPATH=~/.rbenv/completions:"$FPATH"
-
-      autoload -U compinit
-      compinit
+      autoload -U compinit; compinit
 
       # Added by `rbenv init` on Fri Jul 11 15:08:11 CEST 2025
       eval "$(rbenv init - --no-rehash zsh)"
