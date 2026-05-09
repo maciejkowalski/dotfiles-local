@@ -1,6 +1,8 @@
 #!/bin/bash
-export RBENV_VERSION=$(rbenv global)
 
+if command -v rbenv >/dev/null 2>&1; then
+  export RBENV_VERSION=$(rbenv global)
+fi
 
 # Log output:
 #
