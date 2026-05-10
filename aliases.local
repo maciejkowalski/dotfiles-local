@@ -3,7 +3,7 @@ alias occupiedspace="du -ms *|sort -n"
 alias be="bundle exec"
 alias bes="bundle exec spring"
 
-alias g="git"
+alias gt="git"
 
 alias linecount="find . -path './db' -prune -o -path './config' -prune -o -name '*.rb' \
   -print0 \
