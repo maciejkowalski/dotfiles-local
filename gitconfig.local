@@ -72,10 +72,24 @@
   ff = only
   rebase = true
 
+[push]
+  default = current
+  recurseSubmodules = check
+
 [rebase]
   autostash = true
 
 [gui]
-  fontui = -family \"DejaVu Sans\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
-  fontdiff = -family \"DejaVu Sans Mono\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
   spellingdictionary = en
+  pruneduringfetch = true
+  fontui = -family \"DejaVu Sans\" -size 18 -weight normal -slant roman -underline 0 -overstrike 0
+  fontdiff = -family \"DejaVu Sans Mono\" -size 18 -weight normal -slant roman -underline 0 -overstrike 0
+[smartgit "submodule"]
+  fetchalways = false
+  update = true
+  initializenew = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
