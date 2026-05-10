@@ -70,3 +70,19 @@ setopt EXTENDED_HISTORY
     echo -en '"\x07'
   }
 }
+
+# >>> vscode python
+# version: 0.1.1
+if [ -z "$VSCODE_PYTHON_AUTOACTIVATE_GUARD" ]; then
+    export VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+    if [ -n "$VSCODE_PYTHON_ZSH_ACTIVATE" ] && [ "$TERM_PROGRAM" = "vscode" ]; then
+        eval "$VSCODE_PYTHON_ZSH_ACTIVATE" || true
+    fi
+fi
+# <<< vscode python
+
+# UV python
+. "$HOME/.local/bin/env"
+
+# Golang Version manager - g shell setup
+[ -s "${HOME}/.g/env" ] && \. "${HOME}/.g/env"
