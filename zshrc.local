@@ -53,12 +53,16 @@ esac
 # Fix RSpec failures
 ulimit -n 4096
 
+# Ruby GC tuning
 export MALLOC_ARENA_MAX=2
 
+# ZSH history
 HISTSIZE=10000
 HISTFILESIZE=10000
 setopt EXTENDED_HISTORY
 
+# WSL
+# Preserve current dir when duplicating tab in WSL2
 [[ -n "$WT_SESSION" ]] && {
   chpwd() {
     echo -en '\e]9;9;"'
