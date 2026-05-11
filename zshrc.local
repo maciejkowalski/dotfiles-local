@@ -86,3 +86,6 @@ fi
 
 # Golang Version manager - g shell setup
 [ -s "${HOME}/.g/env" ] && \. "${HOME}/.g/env"
+
+# Set Claude code effort to max
+export CLAUDE_CODE_EFFORT_LEVEL=max
